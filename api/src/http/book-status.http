@@ -1,0 +1,34 @@
+@host = http://localhost:3001/api/bookstatus
+
+#########
+######### Search book status
+######### 
+GET {{host}}/search?text=&page=1&limit=100
+content-type: application/json
+
+#########
+######### Insert book status
+#########
+POST {{host}}
+content-type: application/json
+
+{
+    "status": "not available"
+}
+
+#########
+######### Update book status
+######### query = id
+PUT {{host}}?id=7d540e0e-ab12-4e75-b511-8a079fcd1cb8
+content-type: application/json
+
+{
+    "status": "available"
+}
+
+#########
+######### Delete book status
+######### query = id
+DELETE {{host}}?id=75e86a27-1e36-4e34-9349-38b8fb6b7f2d
+content-type: application/json
+

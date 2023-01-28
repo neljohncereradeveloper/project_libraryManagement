@@ -1,0 +1,53 @@
+@host = http://localhost:3001/api/book
+
+#########
+######### Search book
+######### 
+GET {{host}}/search?text=&page=1&limit=2
+content-type: application/json
+
+#########
+######### Insert book
+#########
+POST {{host}}
+content-type: application/json
+
+{
+    "bookid": "0080010122",
+    "title": "The Lucky Ones",
+    "accountnumber": "acc-001",
+    "isbnnumber": "000-2202101",
+    "sectionid": "ba4685fb-5847-417d-8b5b-5f3ac4249766",
+    "dewydecimal":200,
+    "publisher": "Lauras Book",
+    "placeofpublication": "Davao City",
+    "copyrightyear": 2014,
+    "statusid": "685f6fef-47d3-406c-83eb-78f836580242",
+    "booktypeid": "3d136e8e-15e6-4ad5-bcda-2ac485c8194a"
+}
+
+#########
+######### Update book
+######### query = id
+PUT {{host}}?id=d1e3a39c-7011-4c9f-a762-f89842d1a346
+content-type: application/json
+
+{
+  
+    "bookid": "0080010122",
+    "title": "The Lucky Ones",
+    "accountnumber": "acc-001",
+    "isbnnumber": "000-2202101",
+    "sectionid": "ba4685fb-5847-417d-8b5b-5f3ac4249766",
+    "dewydecimal":100,
+    "publisher": "Lauras Book",
+    "placeofpublication": "Davao City",
+    "copyrightyear": 2015,
+    "statusid": "685f6fef-47d3-406c-83eb-78f836580242",
+    "booktypeid": "3d136e8e-15e6-4ad5-bcda-2ac485c8194a"
+}
+
+######### Testing prices
+#########
+GET {{host}}/test
+content-type: application/json

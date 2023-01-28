@@ -1,0 +1,34 @@
+@host = http://localhost:3001/api/bookauthor
+
+#########
+######### Search book author
+######### 
+GET {{host}}/search?text=&page=1&limit=100
+content-type: application/json
+
+#########
+######### Insert book author
+#########
+POST {{host}}
+content-type: application/json
+
+{
+    "author": "Miles Gonzales"
+}
+
+#########
+######### Update book author
+######### query = id
+PUT {{host}}?id=d6540bd7-7679-46c0-9dce-cd1fb83cdaac
+content-type: application/json
+
+{
+    "author": "Miles Gonzales test"
+}
+
+#########
+######### Delete book author
+######### query = id
+DELETE {{host}}?id=d6540bd7-7679-46c0-9dce-cd1fb83cdaac
+content-type: application/json
+

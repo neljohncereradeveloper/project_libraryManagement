@@ -1,0 +1,22 @@
+@host = http://localhost:3001/api/role
+
+#########
+######### Search role
+######### 
+GET {{host}}/search?text=&page=1&limit=100
+content-type: application/json
+
+#########
+######### Insert role
+#########
+POST {{host}} 
+content-type: application/json
+
+{
+    "name": "developer"
+}
+
+######### Testing prices
+#########
+GET {{host}}/test 
+content-type: application/json

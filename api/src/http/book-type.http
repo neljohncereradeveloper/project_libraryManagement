@@ -1,0 +1,34 @@
+@host = http://localhost:3001/api/booktype
+
+#########
+######### Search book type
+######### 
+GET {{host}}/search?text=&page=1&limit=100
+content-type: application/json
+
+#########
+######### Insert book type
+########C
+POST {{host}}
+content-type: application/json
+
+{
+    "type": "Reserved"
+}
+
+#########
+######### Update book type
+######### query = id
+PUT {{host}}?id=58fcfed8-3b8a-4567-818e-31d1359d138b
+content-type: application/json
+
+{
+    "type": "not reserved"
+}
+
+#########
+######### Delete book type
+######### query = id
+DELETE {{host}}?id=75e86a27-1e36-4e34-9349-38b8fb6b7f2d
+content-type: application/json
+

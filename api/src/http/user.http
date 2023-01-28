@@ -1,0 +1,40 @@
+@host = http://localhost:3001/api/user
+
+#########
+######### Search user
+######### 
+GET {{host}}/search?text=&page=1&limit=2
+content-type: application/json
+
+#########
+######### Insert user
+#########
+POST {{host}}
+content-type: application/json
+
+{
+    "firstname": "Neljohn",
+    "middlename": "Rentillo",
+    "lastname": "Cerera",
+    "idnumber": "0009976744777",
+    "username": "disawake",
+    "roleid": "5d73d0bd-8c4b-42c4-b251-96c6875a77d9"
+}
+
+#########
+######### Update user
+######### query = id
+PUT {{host}}?id=75167829-4499-4b9d-a3e9-0c3ac9faec23
+content-type: application/json
+
+{
+     "firstname": "Neljohn",
+    "middlename": "Rentillo",
+    "lastname": "Cerera",
+    "idnumber": "000889922"
+}
+
+######### Testing prices
+#########
+GET {{host}}/test
+content-type: application/json

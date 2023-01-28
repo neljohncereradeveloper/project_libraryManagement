@@ -1,0 +1,16 @@
+@host = http://localhost:3001/api
+#########
+######### Search accounts
+#########
+GET {{host}}/account/search?text=&page=1&limit=100
+content-type: application/json
+#########
+######### Update account
+######### query = id
+PUT {{host}}/account?id=d11df279-d66a-46c3-be91-d4b27eb1616b
+content-type: application/json
+
+{
+    "roleid": "83042e76-56c8-4571-8fe9-9b1187e92b1d",
+    "username": "cloyd TEST"
+}

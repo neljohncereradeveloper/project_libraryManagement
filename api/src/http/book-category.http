@@ -1,0 +1,34 @@
+@host = http://localhost:3001/api/bookcategory
+
+#########
+######### Search book category
+######### 
+GET {{host}}/search?text=&page=1&limit=100
+content-type: application/json
+
+#########
+######### Insert book category
+#########
+POST {{host}}
+content-type: application/json
+
+{
+    "category": "Romantic test"
+}
+
+#########
+######### Update book category
+######### query = id
+PUT {{host}}?id=9b9ca4ce-66a4-4d4f-b49d-5547f0ae2766
+content-type: application/json
+
+{
+    "category": "Romantic test 1"
+}
+
+#########
+######### Delete book category
+######### query = id
+DELETE {{host}}?id=9b9ca4ce-66a4-4d4f-b49d-5547f0ae2766
+content-type: application/json
+

@@ -1,0 +1,34 @@
+@host = http://localhost:3001/api/booksection
+
+#########
+######### Search booksection
+######### 
+GET {{host}}/search?text=&page=1&limit=100
+content-type: application/json
+
+#########
+######### Insert user
+#########
+POST {{host}}
+content-type: application/json
+
+{
+    "section": "Circulation"
+}
+
+#########
+######### Update book section
+######### query = id
+PUT {{host}}?id=a9686e6d-fc5b-409d-9350-2f654ef56ecd
+content-type: application/json
+
+{
+    "section": "Circulation test 1"
+}
+
+#########
+######### Delete book section
+######### query = id
+DELETE {{host}}?id=a9686e6d-fc5b-409d-9350-2f654ef56ecd
+content-type: application/json
+
